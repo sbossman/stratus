@@ -10,10 +10,18 @@
 
 using namespace std;
 
+struct Element{
+    string tag;
+    string details;
+    string contents;
+};
+
 class Body {
     vector<string> TEMPLATE_BEGIN;
     vector<string> TEMPLATE_END;
     vector<string> temp;
+
+    bool readElement(string buffer, ifstream file);
 
 public:
     Body();

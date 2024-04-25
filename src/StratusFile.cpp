@@ -43,9 +43,11 @@ StratusFile::StratusFile(string file) {
 
     }
 
-    while(getline(inputFile, buffer)){
-        cout << buffer << endl;
-    }
+    body = Body();
+    body.readFromFile(inputFile);
+
+    cout << "Finished reading from file" << endl;
+
 
 
 }

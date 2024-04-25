@@ -1,7 +1,22 @@
-TITLE=My webpage
+TITLE=Yohohoho
 IMPORT{
     ../input/index.css
 }
 
 BODY
-_h1(){ Hello World }
+_div(class="header"){
+    _h1(){
+        Summer Bossman
+    }
+}
+_div(class="box-link-wrapper"){
+    _a(class="box-link"){
+        About Me
+    }
+    _a(class="box-link"){
+        Projects
+    }
+    _a(class="box-link"){
+        Blog
+    }
+}
