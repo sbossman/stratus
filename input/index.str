@@ -1,6 +1,7 @@
 TITLE=Yohohoho
 IMPORT{
     ../input/index.css
+    ../input/linkBar.str AS links
 }
 
 BODY
@@ -20,3 +21,4 @@ _div(class="box-link-wrapper"){
         Blog
     }
 }
+[links]

@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <map>
 
 #ifndef STRATUS_BODY_H
 #define STRATUS_BODY_H
@@ -26,9 +27,11 @@ class Body {
 public:
     Body();
 
-    bool readFromFile(ifstream& file);
+    bool readFromFile(ifstream& file, map<string, Body> importedElements);
 
     bool writeToFile(ofstream& file);
+
+    vector<string> getElemVect();
 
 };
 

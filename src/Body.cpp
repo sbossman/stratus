@@ -14,7 +14,7 @@ Body::Body(){
    TEMPLATE_END.push_back("</html>");
 }
 
-bool Body::readFromFile(std::ifstream &file) {
+bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements) {
     string buffer;
     stack<string> tag_stack;
 
@@ -30,7 +30,6 @@ bool Body::readFromFile(std::ifstream &file) {
                 tag += buffer[i];
                 i++;
             }
-            cout << tag << endl;
             tag_stack.push(tag);
 
             i++;
@@ -48,15 +47,27 @@ bool Body::readFromFile(std::ifstream &file) {
             temp.push_back("<" + tag + " " + details + ">");
 
             // THIS SHOULD NOT PRINT ANYTHING
-            for(int j = i; j < buffer.size(); j++){
-                cout << buffer[j];
-            }
-            cout << endl << "Done reading that line" << endl;
         }
         else if(buffer[i] == '}'){
             string tag = tag_stack.top();
             tag_stack.pop();
             temp.push_back("</" + tag + ">");
+        }
+        else if(buffer[i] == '['){
+            cout << "HERE" << endl;
+            i++;
+            string elemName;
+            for(int j = i; j < buffer.size(); j++){
+                if(!isspace(buffer[j]) && buffer[j] != ']'){
+                    elemName += buffer[j];
+                }
+            }
+            vector<string> elemImport = importedElements[elemName].getElemVect();
+            for(int j = 0; j < elemImport.size(); j++){
+                temp.push_back(elemImport[j]);
+                cout << elemImport[j] << endl;
+            }
+
         }
         else{
             temp.push_back(buffer);
@@ -82,4 +93,8 @@ bool Body::writeToFile(std::ofstream &file) {
 bool Body::readElement(std::string buffer, ifstream file) {
     return true;
 
+}
+
+vector<string> Body::getElemVect() {
+    return temp;
 }

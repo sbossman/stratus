@@ -44,7 +44,7 @@ StratusFile::StratusFile(string file) {
     }
 
     body = Body();
-    body.readFromFile(inputFile);
+    body.readFromFile(inputFile, getImportedElements());
 
     cout << "Finished reading from file" << endl;
 
@@ -67,21 +67,84 @@ bool StratusFile::readImports(ifstream& file){
             return true;
         }
 
-        //TODO: Remove spaces from buffer
         string temp;
+        bool flag = false;
         for(int i = 0; i < buffer.size(); i++){
-            if(!isspace(buffer[i])){
+            if(!isspace(buffer[i])) {
+                temp += buffer[i];
+                flag = true;
+            }
+            else if(flag){
                 temp += buffer[i];
             }
         }
         buffer = temp;
-        cout << buffer << endl;
 
-        ifstream cssFile(buffer);
-        if(!cssFile.is_open()){
-            cerr << "File " << buffer << " does not exist!" << endl;
+
+
+        if(buffer.find(".css") != string::npos){
+            ifstream importedFile(buffer);
+            if(!importedFile.is_open()){
+                cerr << "File " << buffer << " does not exist!" << endl;
+            }
+            head.readInCSS(importedFile);
+            importedFile.close();
         }
-        head.readInCSS(cssFile);
-        cssFile.close();
+        else if(buffer.find(".str") != string::npos){
+           string importFilename = "";
+           int i = 0;
+           while(!isspace(buffer[i])){
+              importFilename += buffer[i];
+              i++;
+           }
+           i++;
+           cout << "Imported Stratus Filename: " << importFilename << endl;
+           size_t findAs = buffer.find(" AS ");
+           string useName;
+           if(findAs != string::npos){
+                for(int i = findAs + 4; i < buffer.size(); i++){
+                    useName += buffer[i];
+                }
+           }
+           else{
+               for(int i = 0; i < buffer.size() - 4; i++){
+                   useName += buffer[i];
+               }
+           }
+
+           cout << "Using " << importFilename << " as " << useName << endl;
+
+           StratusFile stratusFile = StratusFile(importFilename);
+           importedSFs.emplace(useName,stratusFile);
+
+        }
+        else{
+            cerr << "Unknown file type imported" << endl;
+        }
+
     }
+}
+
+map<string, Body> StratusFile::getImportedElements() {
+    map<string, Body> importedElems;
+    for(auto elem : importedSFs){
+       importedElems.emplace(elem.first, elem.second.getBody());
+    }
+    return importedElems;
+}
+
+map<string, Head> StratusFile::getImportedStyling(){
+    map<string, Head> importedElems;
+    for(auto elem : importedSFs){
+        importedElems.emplace(elem.first, elem.second.getHead());
+    }
+    return importedElems;
+}
+
+Head StratusFile::getHead() {
+    return head;
+}
+
+Body StratusFile::getBody(){
+    return body;
 }
