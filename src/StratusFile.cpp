@@ -115,7 +115,9 @@ bool StratusFile::readImports(ifstream& file){
            cout << "Using " << importFilename << " as " << useName << endl;
 
            StratusFile stratusFile = StratusFile(importFilename);
+           head.addStyling(stratusFile.getHead().getStyling());
            importedSFs.emplace(useName,stratusFile);
+
 
         }
         else{

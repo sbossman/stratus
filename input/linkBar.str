@@ -1,3 +1,6 @@
+IMPORT{
+    ../input/linkBar.css
+}
 BODY
 _h1(){
     I'm from a different file

@@ -22,8 +22,11 @@ public:
     void setTitle(string title);
 
     bool readInCSS(ifstream& file);
+    void addStyling(vector<string> importedStyling);
 
     bool writeToFile(ofstream& file);
+
+    vector<string> getStyling();
 
 };
 

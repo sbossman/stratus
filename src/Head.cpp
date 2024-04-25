@@ -62,3 +62,13 @@ bool Head::writeToFile(std::ofstream &file) {
     }
     return true;
 }
+
+void Head::addStyling(vector<std::string> importedStyling) {
+    for(int i = 0; i < importedStyling.size(); i++){
+        styling.push_back(importedStyling[i]);
+    }
+}
+
+vector<string> Head::getStyling() {
+    return styling;
+}
