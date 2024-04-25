@@ -16,10 +16,13 @@ class StratusFile {
     Head head;
     Body body;
 
+    bool readImports(ifstream& file);
+
 public:
     StratusFile(string file);
 
     bool writeToFile(string file);
+
 
 };
 

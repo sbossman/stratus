@@ -2,20 +2,16 @@
 #include <fstream>
 #include <vector>
 
+#include "./StratusFile.h"
+
 using namespace std;
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-    ifstream file("../input/index.str");
-    string buffer;
-    vector<string> body;
-    vector<string> header;
+    StratusFile file = StratusFile("../input/index.str");
 
-
-    while(getline(file, buffer)){
-        cout << buffer << endl;
-    }
+    file.writeToFile("../output/index.html");
 
     return 0;
 }

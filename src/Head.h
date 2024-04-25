@@ -19,6 +19,8 @@ public:
     Head();
     Head(string title);
 
+    void setTitle(string title);
+
     bool readInCSS(ifstream& file);
 
     bool writeToFile(ofstream& file);

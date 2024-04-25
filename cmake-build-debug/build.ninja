@@ -55,6 +55,24 @@ build CMakeFiles/stratus.dir/src/main.cpp.obj: CXX_COMPILER__stratus_unscanned_D
   OBJECT_DIR = CMakeFiles\stratus.dir
   OBJECT_FILE_DIR = CMakeFiles\stratus.dir\src
 
+build CMakeFiles/stratus.dir/src/StratusFile.cpp.obj: CXX_COMPILER__stratus_unscanned_Debug C$:/Users/summe/CLionProjects/stratus/src/StratusFile.cpp || cmake_object_order_depends_target_stratus
+  DEP_FILE = CMakeFiles\stratus.dir\src\StratusFile.cpp.obj.d
+  FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\stratus.dir
+  OBJECT_FILE_DIR = CMakeFiles\stratus.dir\src
+
+build CMakeFiles/stratus.dir/src/Body.cpp.obj: CXX_COMPILER__stratus_unscanned_Debug C$:/Users/summe/CLionProjects/stratus/src/Body.cpp || cmake_object_order_depends_target_stratus
+  DEP_FILE = CMakeFiles\stratus.dir\src\Body.cpp.obj.d
+  FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\stratus.dir
+  OBJECT_FILE_DIR = CMakeFiles\stratus.dir\src
+
+build CMakeFiles/stratus.dir/src/Head.cpp.obj: CXX_COMPILER__stratus_unscanned_Debug C$:/Users/summe/CLionProjects/stratus/src/Head.cpp || cmake_object_order_depends_target_stratus
+  DEP_FILE = CMakeFiles\stratus.dir\src\Head.cpp.obj.d
+  FLAGS = -g -std=gnu++1z -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\stratus.dir
+  OBJECT_FILE_DIR = CMakeFiles\stratus.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target stratus
@@ -63,7 +81,7 @@ build CMakeFiles/stratus.dir/src/main.cpp.obj: CXX_COMPILER__stratus_unscanned_D
 #############################################
 # Link the executable stratus.exe
 
-build stratus.exe: CXX_EXECUTABLE_LINKER__stratus_Debug CMakeFiles/stratus.dir/src/main.cpp.obj
+build stratus.exe: CXX_EXECUTABLE_LINKER__stratus_Debug CMakeFiles/stratus.dir/src/main.cpp.obj CMakeFiles/stratus.dir/src/StratusFile.cpp.obj CMakeFiles/stratus.dir/src/Body.cpp.obj CMakeFiles/stratus.dir/src/Head.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\stratus.dir

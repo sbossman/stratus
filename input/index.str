@@ -1,3 +1,7 @@
-import index.css
+TITLE=My webpage
+IMPORT{
+    ../input/index.css
+}
 
+BODY
 _h1(){ Hello World }

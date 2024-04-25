@@ -8,7 +8,7 @@ using namespace std;
 Head::Head(){
 
     TEMPLATE_BEGIN.push_back("<!DOCTYPE html>");
-    TEMPLATE_BEGIN.push_back("html lang=\"en\"");
+    TEMPLATE_BEGIN.push_back("<html lang=\"en\">");
     TEMPLATE_BEGIN.push_back("<head>");
     TEMPLATE_BEGIN.push_back("\t<meta charset=\"UTF-8\">");
     TEMPLATE_BEGIN.push_back("\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
@@ -24,7 +24,7 @@ Head::Head(){
 Head::Head(string title) : Head(){
 
     TEMPLATE_BEGIN.push_back("<!DOCTYPE html>");
-    TEMPLATE_BEGIN.push_back("html lang=\"en\"");
+    TEMPLATE_BEGIN.push_back("<html lang=\"en\">");
     TEMPLATE_BEGIN.push_back("<head>");
     TEMPLATE_BEGIN.push_back("\t<meta charset=\"UTF-8\">");
     TEMPLATE_BEGIN.push_back("\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
@@ -34,6 +34,11 @@ Head::Head(string title) : Head(){
     TEMPLATE_END.push_back("\t</style>");
     TEMPLATE_END.push_back("</head>");
 
+    this->title = title;
+}
+
+void Head::setTitle(std::string title) {
+    TEMPLATE_BEGIN[5] = "\t<title>" + title + "</title>";
     this->title = title;
 }
 
