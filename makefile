@@ -1,4 +1,4 @@
-build:
-	g++ -o ./build/stratus.exe ./src/main.cpp
+compile:
+	g++ -o ./build/stratus.exe ./src/*.cpp
 run:
-	./build/stratus.exe
+	./build/stratus.exe siteMake.txt ./input/ ./output/

@@ -12,8 +12,10 @@
 
 using namespace std;
 
-StratusFile::StratusFile(string file) {
-    ifstream inputFile(file);
+StratusFile::StratusFile(string file, string inputPath, string outputPath) {
+    this->inputPath = inputPath;
+    this->outputPath = outputPath;
+    ifstream inputFile(inputPath + file);
     if(!inputFile.is_open()){
         cout << "FILE NOT OPEN" << endl;
     }
@@ -54,7 +56,7 @@ StratusFile::StratusFile(string file) {
 
 
 bool StratusFile::writeToFile(string file) {
-    ofstream outFile(file);
+    ofstream outFile(outputPath + file);
     head.writeToFile(outFile);
     body.writeToFile(outFile);
     return true;
@@ -83,7 +85,7 @@ bool StratusFile::readImports(ifstream& file){
 
 
         if(buffer.find(".css") != string::npos){
-            ifstream importedFile(buffer);
+            ifstream importedFile(inputPath + buffer);
             if(!importedFile.is_open()){
                 cerr << "File " << buffer << " does not exist!" << endl;
             }
@@ -114,7 +116,7 @@ bool StratusFile::readImports(ifstream& file){
 
            cout << "Using " << importFilename << " as " << useName << endl;
 
-           StratusFile stratusFile = StratusFile(importFilename);
+           StratusFile stratusFile = StratusFile(importFilename, inputPath, outputPath);
            head.addStyling(stratusFile.getHead().getStyling());
            importedSFs.emplace(useName,stratusFile);
 

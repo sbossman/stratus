@@ -8,8 +8,4 @@ Once complete, this will be a static site generator that will convert Stratus
 text into HTML, so I can port it to UF's computers for my website properly.
 
 ## To do
-### Headers
-- add in capabilities for importing non-CSS files
-
-### Body
-- capture tags
+- Create way to make site generation easier

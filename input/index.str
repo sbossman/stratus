@@ -1,7 +1,7 @@
 TITLE=Yohohoho
 IMPORT{
-    ../input/index.css
-    ../input/linkBar.str AS links
+    index.css
+    linkBar.str AS links
 }
 
 BODY

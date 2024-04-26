@@ -18,13 +18,15 @@ using namespace std;
 class StratusFile {
     Head head;
     Body body;
+    string inputPath;
+    string outputPath;
     map<string, StratusFile> importedSFs;
 
 
     bool readImports(ifstream& file);
 
 public:
-    StratusFile(string file);
+    StratusFile(string file, string inputPath, string outputPath);
 
     bool writeToFile(string file);
 

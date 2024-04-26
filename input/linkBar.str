@@ -1,5 +1,5 @@
 IMPORT{
-    ../input/linkBar.css
+    linkBar.css
 }
 BODY
 _h1(){
