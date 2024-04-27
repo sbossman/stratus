@@ -17,7 +17,7 @@ StratusFile::StratusFile(string file, string inputPath, string outputPath) {
     this->outputPath = outputPath;
     ifstream inputFile(inputPath + file);
     if(!inputFile.is_open()){
-        cout << "FILE NOT OPEN" << endl;
+        cout << "File " << inputPath + file << " not found" << endl;
     }
 
     string buffer;

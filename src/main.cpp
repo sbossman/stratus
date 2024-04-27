@@ -39,11 +39,11 @@ int main(int argc, char* argv[]) {
     }
 
     for(int i = 0; i < filesToRead.size(); i++){
-        StratusFile file = StratusFile(inputDir + filesToRead[i]);
+        StratusFile file = StratusFile(filesToRead[i], inputDir, outputDir);
 
         string output = filesToRead[i].substr(0, filesToRead[i].size()-4) + ".html";
         cout << "ouput: " << output << endl;
-        file.writeToFile(outputDir + output);
+        file.writeToFile(output);
     }
 
 

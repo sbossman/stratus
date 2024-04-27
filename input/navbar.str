@@ -1,0 +1,22 @@
+IMPORT{
+    navbar.css
+}
+
+BODY
+_div(class="navbar"){
+    _a( href="./"){
+        Home
+    }
+    _a(href="./about"){
+        About Me
+    }
+    _a(href="./projects"){
+        Projects
+    }
+    _a(href="./blog"){
+        Blog
+    }
+    _a(href="./contact"){
+        Contact
+    }
+}

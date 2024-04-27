@@ -1,24 +1,32 @@
 TITLE=Yohohoho
 IMPORT{
     index.css
-    linkBar.str AS links
+    navbar.str AS navbar
 }
 
 BODY
-_div(class="header"){
-    _h1(){
-        Summer Bossman
+[navbar]
+_div(class="main"){
+    _div(class="welcome"){
+        _h1(class="welcome"){
+            Welcome!
+        }
+        _h2(class="welcome"){
+            I'm Summer Bossman
+        }
+        _h3(class="welcome"){
+            Computer Science Student
+        }
+        _h3(class="welcome"){
+            at University of Florida
+        }
+        _div(class="welcome-links"){
+            _a(href="https://www.linkedin.com/in/summerbossman"){
+                LinkedIn
+            }
+            _a(href="./projects"){
+                Projects
+            }
+        }
     }
 }
-_div(class="box-link-wrapper"){
-    _a(class="box-link"){
-        About Me
-    }
-    _a(class="box-link"){
-        Projects
-    }
-    _a(class="box-link"){
-        Blog
-    }
-}
-[links]
