@@ -1,0 +1,11 @@
+TITLE=Projects
+IMPORT{
+    navbar.str
+    main.css
+}
+
+BODY
+_div(class="main){
+
+}
+[navbar]

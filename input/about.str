@@ -1,0 +1,87 @@
+TITLE=About Me
+IMPORT{
+    navbar.str
+    main.css
+}
+
+BODY
+_div(class="main"){
+    _h1(){
+        About Me
+    }
+    _div(class="pic-text-a"){
+        _div(class="self-img"){
+        }
+        _div(class="text"){
+            _p(){
+                Hello! My name is Summer Bossman, and I am an undergraduate
+                student in the University of Florida Honors program. I'm
+                majoring in Computer Science, with a minor in English. I'll
+                be graduating in 2026.
+            }
+            _p(){
+                I am currently an Undergraduate Peer Mentor for Programming
+                Fundamentals II (COP3503C). There, I teach students how to
+                program in C++. I hold discussion section, where we review
+                course content. I also host officer hours, where I debug
+                student code.
+            }
+            _p(){
+                In my free time, I enjoy programming, reading, cross stitch,
+                writing, baking, and watching television. I've been keeping a
+                daily journal since I was in 8th grade (so for over six years).
+                I also currently have a sourdough starter named Harold, although
+                I haven't had time to frequently bake with him. I've also folded
+                over 5,000 paper cranes!
+
+            }
+        }
+    }
+    _h2(){
+        Projects
+    }
+    _div(class="blocks"){
+        _div(class="block"){
+            _a(){
+                Stratus
+            }
+        }
+        _div(class="block"){
+            _a(){
+                Class Capture
+            }
+        }
+        _div(class="block"){
+            _a(){
+                Ao3 Trawler
+            }
+        }
+        _div(class="block"){
+            _a(){
+                Line Distribution
+            }
+        }
+    }
+    _p(){
+        For more projects, go to my
+        _a(href="./projects"){
+            Projects
+        }
+        page.
+    }
+    _h2(){
+        Extracurriculars
+    }
+    _ul(){
+        _li(){
+            Association of Honors Art (Social Manager)
+        }
+        _li(){
+            Women in Computer Science and Engineering
+        }
+        _li(){
+            Shakespeare in the Park
+        }
+    }
+}
+[navbar]

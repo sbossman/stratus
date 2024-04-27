@@ -1,1 +1,2 @@
 index.str
+about.str

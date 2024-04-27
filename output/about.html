@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Me</title>
+	<style>
+		.navbar{
+		    width: 100%;
+		    height: 50px;
+		    float: left;
+		    top: 0px;
+		    position: static;
+		    display: flex;
+		    flex-direction: row;
+		    position: fixed;
+		    justify-content: center;
+		    align-items: center;
+		    overflow: hidden;
+		
+		    border-bottom: #d9d9d9 2px solid;
+		    background-color: #ffffff
+		}
+		
+		.navbar a{
+		    height: 30px;
+		    text-align: right;
+		    padding: 20px;
+		    display: block;
+		    font-family: sans-serif;
+		    font-size: 20px;
+		    text-decoration: none;
+		    color: #000;
+		}
+		
+		.navbar a:hover{
+		    background-color: #d9d9d9;
+		}
+		.main{
+		    width: 60%;
+		    position: absolute;
+		    left: 20%;
+		    top: 50px;
+		    padding: 20px;
+		    font-family: sans-serif;
+		}
+		
+		.main h1{
+		    justify: center;
+		    text-align: center;
+		}
+		
+		.main p{
+		    font-size: 15px;
+		    font-family: sans-serif;
+		}
+		
+		
+		.pic-text-a{
+		    margin-top: 20px;
+		    display: flex;
+		    overflow: visible;
+		    align-items: center;
+		    min-height: 200px;
+		}
+		
+		.self-img{
+		    border-radius: 100px;
+		    background-color: #ffe599;
+		}
+		
+		.pic-text-a .self-img{
+		    width: 400px;
+		    height: 200px;
+		    object-fit: cover;
+		    float: left;
+		    display: inline-block;
+		    margin-right: 30px;
+		}
+		
+		.pic-text-a p{
+		    padding-right: 20px;
+		}
+		
+		.blocks{
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		}
+		
+		.block{
+		    display: flex;
+		    width: 150px;
+		    height: 150px;
+		    margin-left: 50px;
+		    border-radius: 10px;
+		    background-color: #ffe599;
+		    align-content: center;
+		    padding: 0;
+		    align-items: center;
+		    justify-content: center;
+		    font-size: 25px;
+		}
+		
+		.block:hover{
+		    background-color: #FFF2CC;
+		    outline-width: 3px;
+		}
+		
+		.block a{
+		    margin: 0px;
+		    color: #087E8B;
+		    text-align: center;
+		}
+		
+		.block:hover a{
+		    color: #0bafc1;
+		}
+		
+		
+		p a{
+		    color: #087E8B;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+<h1 >
+        About Me
+</h1>
+<div class="pic-text-a">
+<div class="self-img">
+</div>
+<div class="text">
+<p >
+                Hello! My name is Summer Bossman, and I am an undergraduate
+                student in the University of Florida Honors program. I'm
+                majoring in Computer Science, with a minor in English. I'll
+                be graduating in 2026.
+</p>
+<p >
+                I am currently an Undergraduate Peer Mentor for Programming
+                Fundamentals II (COP3503C). There, I teach students how to
+                program in C++. I hold discussion section, where we review
+                course content. I also host officer hours, where I debug
+                student code.
+</p>
+<p >
+                In my free time, I enjoy programming, reading, cross stitch,
+                writing, baking, and watching television. I've been keeping a
+                daily journal since I was in 8th grade (so for over six years).
+                I also currently have a sourdough starter named Harold, although
+                I haven't had time to frequently bake with him. I've also folded
+                over 5,000 paper cranes!
+
+</p>
+</div>
+</div>
+<h2 >
+        Projects
+</h2>
+<div class="blocks">
+<div class="block">
+<a >
+                Stratus
+</a>
+</div>
+<div class="block">
+<a >
+                Class Capture
+</a>
+</div>
+<div class="block">
+<a >
+                Ao3 Trawler
+</a>
+</div>
+<div class="block">
+<a >
+                Line Distribution
+</a>
+</div>
+</div>
+<p >
+        For more projects, go to my
+<a href="https://github.com/sbossman">
+            GitHub
+</a>
+</p>
+<h2 >
+        Extracurriculars
+</h2>
+<ul >
+<li >
+            Association of Honors Art (Social Manager)
+</li>
+<li >
+            Women in Computer Science and Engineering
+</li>
+<li >
+            Shakespeare in the Park
+</li>
+</ul>
+</div>
+<div class="navbar">
+<a  href="./">
+        Home
+</a>
+<a href="./about">
+        About Me
+</a>
+<a href="./projects">
+        Projects
+</a>
+<a href="./blog">
+        Blog
+</a>
+<a href="./contact">
+        Contact
+</a>
+</div>
+</body>
+</html>

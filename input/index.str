@@ -1,4 +1,4 @@
-TITLE=Yohohoho
+TITLE=Summer Bossman
 IMPORT{
     index.css
     navbar.str AS navbar
@@ -26,6 +26,9 @@ _div(class="main"){
             }
             _a(href="./projects"){
                 Projects
+            }
+            _a(href="https://github.com/sbossman"){
+                GitHub
             }
         }
     }

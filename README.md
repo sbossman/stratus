@@ -75,3 +75,4 @@ brackets `[]`.
 - Create library of helpful templates
 - Improve CSS stuff
 - Include * and **, and other sorts of things
+- Enable same line syntax
