@@ -71,10 +71,10 @@ brackets `[]`.
 ## To Do
 - Create more helpful error handling
 - Figure out how to make something to colorize Stratus files
-- Build complex website with Stratus
 - Create library of helpful templates
 - Making templates easier to create + use would be good too
 - Improve CSS stuff
 - Include * and **, and other sorts of things
 - Enable same line syntax
 - Create instructions on how to get CISE hosting
+- Figure out embedding JavaScript

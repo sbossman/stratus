@@ -6,11 +6,94 @@ IMPORT{
 
 BODY
 _div(class="main"){
-    _h2(){
+    _h1(){
         Blog
     }
+    _h2(){
+       Creating a Website through UF CISE
+    }
     _p(){
-       No blog entries at the moment!
+        If you are interested in creating a website, and you are a
+        UF Computer Science/Engineering student or faculty member,
+        you can have your website hosted for free with your CISE
+        account.
+    }
+    _p(){
+        In order to host your site, you need basic knowledge about
+        Linux commands and HTML/CSS.
+    }
+    _ol(){
+        _li(){
+            If you haven't already, create your UF CISE account
+        }
+        _li(){
+            In your terminal, log into one of UF's
+            _a(href="https://it.cise.ufl.edu/support/servers/"){
+                bastion servers
+            }
+            (such as rain.cise.ufl.edu).
+            _code(){
+                ssh username@rain.cise.ufl.edu
+            }
+        }
+        _li(){
+            Create the
+            _code(){
+                public_html
+            }
+            directory if it doesn't already exist.
+        }
+        _li(){
+            Create an
+            _code(){
+                index.html
+            }
+            file. This will be where your site will automatically route
+            to. You can create other sites as well.
+        }
+    }
+    _p(){
+        To edit the files in the CISE server, you can use Vim or whatever
+        your command line editor of choice is. You can also use scp to copy
+        files from your home computer to the CISE server.
+    }
+    _p(){
+        You may find coding in HTML/CSS sufficient for your purposes, but if
+        you want a more robust website, it's a good idea to use some sort of
+        Static Site Generator (SSG). UF CISE recommends
+        _a(href="https://gohugo.io/"){
+            Hugo
+        }
+        ,
+        _a(href="https://jekyllrb.com/"){
+            Jekyll
+        }
+        , or
+        _a(href="https://www.gatsbyjs.com/"){
+            Gatsby
+        }
+        , but you can also create your own Static Site Generator. (This is what
+        I did, and it wasn't all that difficult.)
+    }
+    _h3(){
+        Further Resources
+    }
+    _ul(){
+        _li(){
+            _a(href="https://it.cise.ufl.edu/support/personal-website/"){
+                UF CISE Documentation for Personal Websites
+            }
+        }
+        _li(){
+            _a(href="https://www.cise.ufl.edu/~jngoboc/posts/personalsitecise/"){
+                This post by Josh Ngoboc
+            }
+        }
+        _li(){
+            _a(href="https://it.cise.ufl.edu/support/remote-access/"){
+                Accessing CISE Linux machines over internet
+            }
+        }
     }
 }
 [navbar]

@@ -10,7 +10,7 @@ _div(class="main"){
         About Me
     }
     _div(class="pic-text-a"){
-        _div(class="self-img"){
+        _img(class="self-img" src="./assets/self.jpg" alt="A photo of me"){
         }
         _div(class="text"){
             _p(){

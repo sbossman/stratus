@@ -19,6 +19,7 @@ body{
 .main h2{
     border-bottom: #ffe599 solid 2px;
     margin-top: 30px;
+    color: #392f5a;
 }
 
 .main p{
@@ -38,15 +39,16 @@ body{
 .self-img{
     border-radius: 100px;
     background-color: #ffe599;
+    width: 650px;
+    height: 200px;
 }
 
 .pic-text-a .self-img{
-    width: 400px;
-    height: 200px;
     object-fit: cover;
     float: left;
     display: inline-block;
     margin-right: 30px;
+    overflow: hidden;
 }
 
 .pic-text-a p{

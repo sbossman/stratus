@@ -2,4 +2,3 @@ index.str
 about.str
 projects.str
 blog.str
-contact.str
