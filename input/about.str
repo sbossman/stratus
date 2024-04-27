@@ -42,22 +42,22 @@ _div(class="main"){
     }
     _div(class="blocks"){
         _div(class="block"){
-            _a(){
+            _a(href="https://github.com/sbossman/stratus"){
                 Stratus
             }
         }
         _div(class="block"){
-            _a(){
+            _a(href="https://github.com/shane-downs/ClassCaptureUFSWE"){
                 Class Capture
             }
         }
         _div(class="block"){
-            _a(){
+            _a(href="https://github.com/sbossman/AO3-Trawler"){
                 Ao3 Trawler
             }
         }
         _div(class="block"){
-            _a(){
+            _a(href="https://github.com/sbossman/EquitableLineDistribution"){
                 Line Distribution
             }
         }
@@ -69,6 +69,20 @@ _div(class="main"){
         }
         page.
     }
+    _h2(){
+        Contact Information
+    }
+    _p(){
+        You can email me at bossmans@ufl.edu.
+    }
+    _p(){
+        Connect with me on
+        _a(href="https://www.linkedin.com/in/summerbossman/"){
+            LinkedIn
+        }
+        !
+    }
+
     _h2(){
         Extracurriculars
     }

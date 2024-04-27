@@ -16,7 +16,4 @@ _div(class="navbar"){
     _a(href="./blog"){
         Blog
     }
-    _a(href="./contact"){
-        Contact
-    }
 }

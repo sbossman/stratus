@@ -1,0 +1,16 @@
+TITLE=Blog
+IMPORT{
+    main.css
+    navbar.str AS navbar
+}
+
+BODY
+_div(class="main"){
+    _h2(){
+        Blog
+    }
+    _p(){
+       No blog entries at the moment!
+    }
+}
+[navbar]

@@ -82,6 +82,7 @@ body{
     margin: 0px;
     color: #087E8B;
     text-align: center;
+    text-decoration: none;
 }
 
 .block:hover a{
@@ -92,3 +93,4 @@ body{
 a{
     color: #087E8B;
 }
+
