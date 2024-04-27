@@ -6,12 +6,9 @@ IMPORT{
 
 BODY
 _div(class="main"){
-    _h1(){
-        About Me
-    }
+    _h1(){ About Me }
     _div(class="pic-text-a"){
-        _img(class="self-img" src="./assets/self.jpg" alt="A photo of me"){
-        }
+        _img(class="self-img" src="./assets/self.jpg" alt="A photo of me"){}
         _div(class="text"){
             _p(){
                 Hello! My name is Summer Bossman, and I am an undergraduate
@@ -33,13 +30,11 @@ _div(class="main"){
                 I also currently have a sourdough starter named Harold, although
                 I haven't had time to frequently bake with him. I've also folded
                 over 5,000 paper cranes!
-
             }
         }
     }
-    _h2(){
-        Projects
-    }
+    _h2(){ Projects }
+
     _div(class="blocks"){
         _div(class="block"){
             _a(href="https://github.com/sbossman/stratus"){
@@ -64,38 +59,25 @@ _div(class="main"){
     }
     _p(){
         For more projects, go to my
-        _a(href="./projects"){
-            Projects
-        }
+        _a(href="./projects"){Projects}
         page.
     }
-    _h2(){
-        Contact Information
-    }
+    _h2(){ Contact Information }
+
     _p(){
         You can email me at bossmans@ufl.edu.
     }
     _p(){
         Connect with me on
-        _a(href="https://www.linkedin.com/in/summerbossman/"){
-            LinkedIn
-        }
+        _a(href="https://www.linkedin.com/in/summerbossman/"){LinkedIn}
         !
     }
 
-    _h2(){
-        Extracurriculars
-    }
+    _h2(){ Extracurriculars }
     _ul(){
-        _li(){
-            Association of Honors Art (Social Manager)
-        }
-        _li(){
-            Women in Computer Science and Engineering
-        }
-        _li(){
-            Shakespeare in the Park
-        }
+        _li(){ Association of Honors Art (Social Manager) }
+        _li(){ Women in Computer Science and Engineering }
+        _li(){ Shakespeare in the Park }
     }
 }
 [navbar]

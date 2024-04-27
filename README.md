@@ -69,12 +69,11 @@ brackets `[]`.
      caught or error handled properly
 
 ## To Do
-- Create more helpful error handling
-- Figure out how to make something to colorize Stratus files
+- Create more helpful error handling + terminal statements
+- Figure out syntax highlighting for Stratus files
 - Create library of helpful templates
 - Making templates easier to create + use would be good too
 - Improve CSS stuff
 - Include * and **, and other sorts of things
-- Enable same line syntax
-- Create instructions on how to get CISE hosting
+- Enable different tags on same line
 - Figure out embedding JavaScript

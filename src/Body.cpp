@@ -39,14 +39,30 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
                 i++;
             }
             i++;
-            cout << details << endl;
             while(buffer[i] != '{'){
                 i++;
             }
             i++;
             temp.push_back("<" + tag + " " + details + ">");
 
-            // THIS SHOULD NOT PRINT ANYTHING
+            // Reading rest of line
+            string restOfLine;
+            bool flag = true;
+            while(i < buffer.size()){
+                if(buffer[i] == '}'){
+                    temp.push_back(restOfLine);
+                    flag = false;
+                    string tag = tag_stack.top();
+                    tag_stack.pop();
+                    temp.push_back("</" + tag + ">");
+                }
+                restOfLine += buffer[i];
+                i++;
+            }
+            if(flag){
+                temp.push_back(restOfLine);
+            }
+
         }
         else if(buffer[i] == '}'){
             string tag = tag_stack.top();
@@ -54,7 +70,6 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
             temp.push_back("</" + tag + ">");
         }
         else if(buffer[i] == '['){
-            cout << "HERE" << endl;
             i++;
             string elemName;
             for(int j = i; j < buffer.size(); j++){
@@ -65,7 +80,6 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
             vector<string> elemImport = importedElements[elemName].getElemVect();
             for(int j = 0; j < elemImport.size(); j++){
                 temp.push_back(elemImport[j]);
-                cout << elemImport[j] << endl;
             }
 
         }

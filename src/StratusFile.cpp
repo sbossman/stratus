@@ -95,7 +95,7 @@ bool StratusFile::readImports(ifstream& file){
         else if(buffer.find(".str") != string::npos){
            string importFilename = "";
            int i = 0;
-           while(!isspace(buffer[i])){
+           while(!isspace(buffer[i]) && i < buffer.size()){
               importFilename += buffer[i];
               i++;
            }

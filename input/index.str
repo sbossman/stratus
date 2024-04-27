@@ -8,18 +8,11 @@ BODY
 [navbar]
 _div(class="main"){
     _div(class="welcome"){
-        _h1(class="welcome"){
-            Welcome!
-        }
-        _h2(class="welcome"){
-            I'm Summer Bossman
-        }
-        _h3(class="welcome"){
-            Computer Science Student
-        }
-        _h3(class="welcome"){
-            at University of Florida
-        }
+        _h1(class="welcome"){ Welcome! }
+        _h2(class="welcome"){ I'm Summer Bossman }
+        _h3(class="welcome"){ Computer Science Student }
+        _h3(class="welcome"){ at University of Florida }
+
         _div(class="welcome-links"){
             _a(href="https://www.linkedin.com/in/summerbossman"){
                 LinkedIn
