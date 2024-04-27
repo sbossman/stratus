@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projects</title>
+	<style>
+		.navbar{
+		    width: 100%;
+		    height: 50px;
+		    float: left;
+		    top: 0px;
+		    position: static;
+		    display: flex;
+		    flex-direction: row;
+		    position: fixed;
+		    justify-content: center;
+		    align-items: center;
+		    overflow: hidden;
+		
+		    border-bottom: #d9d9d9 2px solid;
+		    background-color: #ffffff
+		}
+		
+		.navbar a{
+		    height: 30px;
+		    text-align: right;
+		    padding: 20px;
+		    display: block;
+		    font-family: sans-serif;
+		    font-size: 20px;
+		    text-decoration: none;
+		    color: #000;
+		}
+		
+		.navbar a:hover{
+		    background-color: #d9d9d9;
+		}
+		body{
+		    background-color: #FFF2CC;
+		}
+		.main{
+		    background-color: white;
+		    width: 60%;
+		    position: absolute;
+		    left: 20%;
+		    top: 20px;
+		    padding: 20px;
+		    font-family: sans-serif;
+		}
+		
+		.main h1{
+		    justify: center;
+		    text-align: center;
+		}
+		
+		.main h2{
+		    border-bottom: #ffe599 solid 2px;
+		    margin-top: 30px;
+		}
+		
+		.main p{
+		    font-size: 15px;
+		    font-family: sans-serif;
+		}
+		
+		
+		.pic-text-a{
+		    margin-top: 20px;
+		    display: flex;
+		    overflow: visible;
+		    align-items: center;
+		    min-height: 200px;
+		}
+		
+		.self-img{
+		    border-radius: 100px;
+		    background-color: #ffe599;
+		}
+		
+		.pic-text-a .self-img{
+		    width: 400px;
+		    height: 200px;
+		    object-fit: cover;
+		    float: left;
+		    display: inline-block;
+		    margin-right: 30px;
+		}
+		
+		.pic-text-a p{
+		    padding-right: 20px;
+		}
+		
+		.blocks{
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: nowrap;
+		}
+		
+		.block{
+		    display: flex;
+		    width: 150px;
+		    height: 150px;
+		    margin-left: 50px;
+		    border-radius: 10px;
+		    background-color: #ffe599;
+		    align-content: center;
+		    padding: 0;
+		    align-items: center;
+		    justify-content: center;
+		    font-size: 25px;
+		}
+		
+		.block:hover{
+		    background-color: #FFF2CC;
+		    outline-width: 3px;
+		}
+		
+		.block a{
+		    margin: 0px;
+		    color: #087E8B;
+		    text-align: center;
+		}
+		
+		.block:hover a{
+		    color: #0bafc1;
+		}
+		
+		
+		a{
+		    color: #087E8B;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+<h1 class="Here">
+        Projects
+</h1>
+<h2 >
+        Stratus (Static Site Generator)
+</h2>
+<p >
+        Stratus is a Static Site Generator I built for this website.
+        It converts sites written in Stratus (a markdown language I
+        created for my personal convenience and comfort) into HTML,
+        so I can then load them onto the UF CISE web hosting (they
+        only allow static HTML/CSS sites). I'm still perfecting it,
+        but it is fully operational right now.
+</p>
+<a href="https://github.com/sbossman/stratus">
+        GitHub Repository
+</a>
+
+<h2 >
+        Class Capture
+</h2>
+<p >
+        Class Capture is a project I worked on with a few others in
+        my class. It's a social media app that allows different users
+        to join groups with their friends, coworkers, or classmates,
+        and they can all upload photos. Then, at the end of a time
+        period, all of the photos they took and uploaded will be
+        released, so they can look back on the enjoyable times they
+        had together. It is currently a work in progress.
+</p>
+<p >
+        It is a full stack web app that uses ReactJS for the front end
+        and MongoDB for the back end. I did most of the work for the
+        front end for this project, so I learned a lot of React for
+        this project. I also did a fair amount of front end/back end
+        connection fetching data from the database.
+</p>
+<a href="https://github.com/shane-downs/ClassCaptureUFSWE">
+        GitHub Repository
+</a>
+
+<h2 >
+        Ao3 Trawler
+</h2>
+<p >
+        In this project, I collaborated with my classmates in Data
+        Structures and Algorithms to compare the efficiency of an
+        adjacency matrix vs an adjacency list, when attempting to
+        create the data structures and find paths between two points.
+        We used data from the online fanfiction platform
+<a href="https://archiveofourown.org/">
+            Archive of Our Own
+</a>
+        (Ao3), web scraping over 100,000 fanfictions, and their taglists.
+        I wrote the code to turn the data points into the adjacency
+        matrix and adjacency list, as well as the pathfinding algorithm
+        for two points (we used a Breadth First Traversal to find the
+        shortest route between two fanfictions).
+</p>
+<a href="https://github.com/sbossman/AO3-Trawler">
+        GitHub Repository
+</a>
+
+<h2 >
+        Line Distribution
+</h2>
+<p >
+        This programming project is one I completed in high school. It
+        parses through a TXT file of a Shakespeare play, and then
+        identifies all of the different characters, as well as the number
+        of lines they have, the words they speak, and the characters they
+        talk to. Using this information, I also wrote an algorithm to
+        distribute the different characters in the play to a different
+        number of "readers," so no person reading the play out loud has
+        to speak to themself.
+</p>
+<a href="https://github.com/sbossman/EquitableLineDistribution">
+        GitHub Repository
+</a>
+
+<br >
+</br>
+<p class="here2">
+        For the code for all projects, see my
+<a href="https://github.com/sbossman">
+            GitHub
+</a>
+</p>
+</div>
+<div class="navbar">
+<a  href="./">
+        Home
+</a>
+<a href="./about">
+        About Me
+</a>
+<a href="./projects">
+        Projects
+</a>
+<a href="./blog">
+        Blog
+</a>
+<a href="./contact">
+        Contact
+</a>
+</div>
+</body>
+</html>

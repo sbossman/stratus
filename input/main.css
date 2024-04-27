@@ -1,8 +1,12 @@
+body{
+    background-color: #FFF2CC;
+}
 .main{
+    background-color: white;
     width: 60%;
     position: absolute;
     left: 20%;
-    top: 50px;
+    top: 20px;
     padding: 20px;
     font-family: sans-serif;
 }
@@ -10,6 +14,11 @@
 .main h1{
     justify: center;
     text-align: center;
+}
+
+.main h2{
+    border-bottom: #ffe599 solid 2px;
+    margin-top: 30px;
 }
 
 .main p{
@@ -80,6 +89,6 @@
 }
 
 
-p a{
+a{
     color: #087E8B;
 }

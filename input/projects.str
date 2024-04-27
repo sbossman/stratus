@@ -5,7 +5,94 @@ IMPORT{
 }
 
 BODY
-_div(class="main){
+_div(class="main"){
+    _h1(class="Here"){
+        Projects
+    }
+    _h2(){
+        Stratus (Static Site Generator)
+    }
+    _p(){
+        Stratus is a Static Site Generator I built for this website.
+        It converts sites written in Stratus (a markdown language I
+        created for my personal convenience and comfort) into HTML,
+        so I can then load them onto the UF CISE web hosting (they
+        only allow static HTML/CSS sites). I'm still perfecting it,
+        but it is fully operational right now.
+    }
+    _a(href="https://github.com/sbossman/stratus"){
+        GitHub Repository
+    }
 
+    _h2(){
+        Class Capture
+    }
+    _p(){
+        Class Capture is a project I worked on with a few others in
+        my class. It's a social media app that allows different users
+        to join groups with their friends, coworkers, or classmates,
+        and they can all upload photos. Then, at the end of a time
+        period, all of the photos they took and uploaded will be
+        released, so they can look back on the enjoyable times they
+        had together. It is currently a work in progress.
+    }
+    _p(){
+        It is a full stack web app that uses ReactJS for the front end
+        and MongoDB for the back end. I did most of the work for the
+        front end for this project, so I learned a lot of React for
+        this project. I also did a fair amount of front end/back end
+        connection fetching data from the database.
+    }
+    _a(href="https://github.com/shane-downs/ClassCaptureUFSWE"){
+        GitHub Repository
+    }
+
+    _h2(){
+        Ao3 Trawler
+    }
+    _p(){
+        In this project, I collaborated with my classmates in Data
+        Structures and Algorithms to compare the efficiency of an
+        adjacency matrix vs an adjacency list, when attempting to
+        create the data structures and find paths between two points.
+        We used data from the online fanfiction platform
+        _a(href="https://archiveofourown.org/"){
+            Archive of Our Own
+        }
+        (Ao3), web scraping over 100,000 fanfictions, and their taglists.
+        I wrote the code to turn the data points into the adjacency
+        matrix and adjacency list, as well as the pathfinding algorithm
+        for two points (we used a Breadth First Traversal to find the
+        shortest route between two fanfictions).
+    }
+    _a(href="https://github.com/sbossman/AO3-Trawler"){
+        GitHub Repository
+    }
+
+    _h2(){
+        Line Distribution
+    }
+    _p(){
+        This programming project is one I completed in high school. It
+        parses through a TXT file of a Shakespeare play, and then
+        identifies all of the different characters, as well as the number
+        of lines they have, the words they speak, and the characters they
+        talk to. Using this information, I also wrote an algorithm to
+        distribute the different characters in the play to a different
+        number of "readers," so no person reading the play out loud has
+        to speak to themself.
+    }
+    _a(href="https://github.com/sbossman/EquitableLineDistribution"){
+        GitHub Repository
+    }
+
+    _br(){
+    }
+    _p(class="here2"){
+        For the code for all projects, see my
+        _a(href="https://github.com/sbossman"){
+            GitHub
+        }
+    }
 }
 [navbar]
