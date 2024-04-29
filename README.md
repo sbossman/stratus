@@ -77,3 +77,4 @@ brackets `[]`.
 - Include * and **, and other sorts of things
 - Enable different tags on same line
 - Figure out embedding JavaScript
+- Blog txt writer thing

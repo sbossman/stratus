@@ -17,7 +17,7 @@ StratusFile::StratusFile(string file, string inputPath, string outputPath) {
     this->outputPath = outputPath;
     ifstream inputFile(inputPath + file);
     if(!inputFile.is_open()){
-        cout << "File " << inputPath + file << " not found" << endl;
+        cerr << "File " << inputPath + file << " not found" << endl;
     }
 
     string buffer;
@@ -47,8 +47,6 @@ StratusFile::StratusFile(string file, string inputPath, string outputPath) {
 
     body = Body();
     body.readFromFile(inputFile, getImportedElements());
-
-    cout << "Finished reading from file" << endl;
 
 
 
@@ -100,7 +98,6 @@ bool StratusFile::readImports(ifstream& file){
               i++;
            }
            i++;
-           cout << "Imported Stratus Filename: " << importFilename << endl;
            size_t findAs = buffer.find(" AS ");
            string useName;
            if(findAs != string::npos){
@@ -114,7 +111,6 @@ bool StratusFile::readImports(ifstream& file){
                }
            }
 
-           cout << "Using " << importFilename << " as " << useName << endl;
 
            StratusFile stratusFile = StratusFile(importFilename, inputPath, outputPath);
            head.addStyling(stratusFile.getHead().getStyling());
@@ -127,6 +123,7 @@ bool StratusFile::readImports(ifstream& file){
         }
 
     }
+    cerr << "IMPORT statement must end with '}' on a newline" << endl;
 }
 
 map<string, Body> StratusFile::getImportedElements() {

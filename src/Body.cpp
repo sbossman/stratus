@@ -65,6 +65,9 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
 
         }
         else if(buffer[i] == '}'){
+            if(tag_stack.size() == 0){
+                cerr << "Missing opening bracket somewhere" << endl;
+            }
             string tag = tag_stack.top();
             tag_stack.pop();
             temp.push_back("</" + tag + ">");
@@ -72,10 +75,18 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
         else if(buffer[i] == '['){
             i++;
             string elemName;
+            bool closingBracketFlag = false;
             for(int j = i; j < buffer.size(); j++){
                 if(!isspace(buffer[j]) && buffer[j] != ']'){
                     elemName += buffer[j];
                 }
+                if(buffer[j] == ']'){
+                    closingBracketFlag = true;
+                    break;
+                }
+            }
+            if(!closingBracketFlag){
+                cerr << "Missing closing bracket ']' somewhere!" << endl;
             }
             vector<string> elemImport = importedElements[elemName].getElemVect();
             for(int j = 0; j < elemImport.size(); j++){
@@ -87,6 +98,9 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
             temp.push_back(buffer);
         }
 
+    }
+    if(tag_stack.size() > 0){
+        cerr <<  "Too many opening brackets! Missing closing bracket somewhere" << endl;
     }
     return true;
 }
@@ -104,10 +118,6 @@ bool Body::writeToFile(std::ofstream &file) {
     return true;
 }
 
-bool Body::readElement(std::string buffer, ifstream file) {
-    return true;
-
-}
 
 vector<string> Body::getElemVect() {
     return temp;

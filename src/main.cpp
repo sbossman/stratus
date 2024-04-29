@@ -7,12 +7,10 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-    std::cout << "Hello, World!" << std::endl;
 
 //    StratusFile file = StratusFile("../input/index.str");
 
 //    file.writeToFile("../output/index.html");
-    cout << argc << endl;
     if(argc < 4 ){ //|| argc != 4 || argv[1] == "-help"){
         cout << "Arguments should be passed in with syntax:" << endl;
         cout << "\t [filelist].txt [input dir]/ [output dir]/" << endl;

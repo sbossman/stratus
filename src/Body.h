@@ -22,8 +22,6 @@ class Body {
     vector<string> TEMPLATE_END;
     vector<string> temp;
 
-    bool readElement(string buffer, ifstream file);
-
 public:
     Body();
 
