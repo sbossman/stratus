@@ -5,7 +5,7 @@ IMPORT{
 }
 
 BODY
-[navbar]
+__navbar()
 _div(class="main"){
     _div(class="welcome"){
         _h1(class="welcome"){ Welcome! }

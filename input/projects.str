@@ -74,4 +74,4 @@ _div(class="main"){
         _a(href="https://github.com/sbossman"){ GitHub }
     }
 }
-[navbar]
+__navbar()

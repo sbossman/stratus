@@ -80,5 +80,5 @@ _div(class="main"){
         _li(){ Shakespeare in the Park }
     }
 }
-[navbar]
+__navbar()
 

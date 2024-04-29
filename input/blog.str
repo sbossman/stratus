@@ -79,4 +79,4 @@ _div(class="main"){
         }
     }
 }
-[navbar]
+__navbar()

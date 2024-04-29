@@ -42,8 +42,13 @@ _div(attributes here){
 ```
 Thus all HTML type keywords should begin with an underscore (`_`).
 \n
-To include components you created, instead surround the component name with
-brackets `[]`.
+To include components you created, use two underscores instead,
+to fill in any relevant parameters. Don't use any braces. They won't do
+anything.
+
+*NOTE: This is not current functionality that is fully working. As
+of right now, you can't put any parameters in.*
+
 
 `[myComponent]`
 
@@ -62,7 +67,7 @@ brackets `[]`.
      CSS files are stored in (with the `/` at the end)
    - The output filepath should be the directory you want all of the statically
      generated HTML files in (with the `/` at the end)
-   - *For an example run command, see `makefile`, and for an exmple input text
+   - *For an example run command, see `makefile`, and for an example input text
      list, see `siteMake.txt`*
 4. All of your HTML files should now be placed in the output folder
    - If there are any errors in your Stratus or CSS files, these may not be

@@ -25,42 +25,58 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
         }
         if(buffer[i] == '_'){
             i++;
+            bool importedElem = false;
+            // It's an imported element
+            if(buffer[i] == '_'){
+               importedElem = true;
+               i++;
+            }
+            // It's a normal HTML element
             string tag = "";
             while(buffer[i] != '('){
-                tag += buffer[i];
-                i++;
-            }
-            tag_stack.push(tag);
+               tag += buffer[i];
+               i++;
+           }
+            if(!importedElem)
+                tag_stack.push(tag);
 
             i++;
             string details;
             while(buffer[i] != ')'){
-                details += buffer[i];
-                i++;
+               details += buffer[i];
+               i++;
             }
             i++;
-            while(buffer[i] != '{'){
-                i++;
-            }
-            i++;
-            temp.push_back("<" + tag + " " + details + ">");
-
-            // Reading rest of line
-            string restOfLine;
-            bool flag = true;
-            while(i < buffer.size()){
-                if(buffer[i] == '}'){
-                    temp.push_back(restOfLine);
-                    flag = false;
-                    string tag = tag_stack.top();
-                    tag_stack.pop();
-                    temp.push_back("</" + tag + ">");
+            if(importedElem){
+                vector<string> elemImport = importedElements[tag].getElemVect();
+                for(int j = 0; j < elemImport.size(); j++){
+                    temp.push_back(elemImport[j]);
                 }
-                restOfLine += buffer[i];
-                i++;
             }
-            if(flag){
-                temp.push_back(restOfLine);
+            else{
+                while(buffer[i] != '{'){
+                    i++;
+                }
+                i++;
+                temp.push_back("<" + tag + " " + details + ">");
+
+                // Reading rest of line
+                string restOfLine;
+                bool flag = true;
+                while(i < buffer.size()){
+                    if(buffer[i] == '}'){
+                        temp.push_back(restOfLine);
+                        flag = false;
+                        string tag = tag_stack.top();
+                        tag_stack.pop();
+                        temp.push_back("</" + tag + ">");
+                    }
+                    restOfLine += buffer[i];
+                    i++;
+                }
+                if(flag){
+                    temp.push_back(restOfLine);
+                }
             }
 
         }
@@ -72,28 +88,28 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
             tag_stack.pop();
             temp.push_back("</" + tag + ">");
         }
-        else if(buffer[i] == '['){
-            i++;
-            string elemName;
-            bool closingBracketFlag = false;
-            for(int j = i; j < buffer.size(); j++){
-                if(!isspace(buffer[j]) && buffer[j] != ']'){
-                    elemName += buffer[j];
-                }
-                if(buffer[j] == ']'){
-                    closingBracketFlag = true;
-                    break;
-                }
-            }
-            if(!closingBracketFlag){
-                cerr << "Missing closing bracket ']' somewhere!" << endl;
-            }
-            vector<string> elemImport = importedElements[elemName].getElemVect();
-            for(int j = 0; j < elemImport.size(); j++){
-                temp.push_back(elemImport[j]);
-            }
-
-        }
+//        else if(buffer[i] == '['){
+//
+//            i++;
+//            string elemName;
+//            bool closingBracketFlag = false;
+//            for(int j = i; j < buffer.size(); j++){
+//                if(!isspace(buffer[j]) && buffer[j] != ']'){
+//                    elemName += buffer[j];
+//                }
+//                if(buffer[j] == ']'){
+//                    closingBracketFlag = true;
+//                    break;
+//                }
+//            }
+//            if(!closingBracketFlag){
+//                cerr << "Missing closing bracket ']' somewhere!" << endl;
+//            }
+//            vector<string> elemImport = importedElements[elemName].getElemVect();
+//            for(int j = 0; j < elemImport.size(); j++){
+//                temp.push_back(elemImport[j]);
+//            }
+//        }
         else{
             temp.push_back(buffer);
         }
