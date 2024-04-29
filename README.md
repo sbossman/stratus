@@ -83,3 +83,11 @@ of right now, you can't put any parameters in.*
 - Enable different tags on same line
 - Figure out embedding JavaScript
 - Blog txt writer thing
+- Update stuff so it's no longer so line break dependent
+- get rid of Body class and just combine it with StratusFile
+
+## Misc Grammar Notes to self
+STRING, FILE, ELEMENT
+is element necessary data type if it could just be collapsed
+into file?
+base stratus file can't have any parameters

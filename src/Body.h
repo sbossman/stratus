@@ -1,10 +1,13 @@
 //
 // Created by summe on 4/24/2024.
 //
+#pragma once
 #include <vector>
 #include <iostream>
 #include <fstream>
 #include <map>
+
+#include "Parameter.h"
 
 #ifndef STRATUS_BODY_H
 #define STRATUS_BODY_H

@@ -48,6 +48,28 @@ bool Body::readFromFile(std::ifstream &file, map<string, Body> importedElements)
             }
             i++;
             if(importedElem){
+                map<string, string> params;
+                string currName;
+                string currVal;
+                bool onVal = false;
+                for(int i = 0; i < details.size(); i++){
+                    if(details[i] == ','){
+                        onVal = false;
+                        params.emplace(currName, currVal);
+                    }
+                    else if(details[i] == '='){
+                        onVal=true;
+                    }
+                    else{
+                        if(onVal){
+                            currVal += details[i];
+                        }
+                        else{
+                            currName += details[i];
+                        }
+                    }
+                }
+//                importedElements[tag]
                 vector<string> elemImport = importedElements[tag].getElemVect();
                 for(int j = 0; j < elemImport.size(); j++){
                     temp.push_back(elemImport[j]);

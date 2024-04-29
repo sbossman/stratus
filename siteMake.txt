@@ -2,3 +2,4 @@ index.str
 about.str
 projects.str
 blog.str
+test.str

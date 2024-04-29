@@ -7,4 +7,6 @@ add_executable(stratus src/main.cpp
         src/StratusFile.h
         src/StratusFile.cpp
         src/Body.cpp
-        src/Head.cpp)
+        src/Head.cpp
+        src/Parameter.h
+        src/Parameter.cpp)
