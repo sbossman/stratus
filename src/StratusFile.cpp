@@ -241,7 +241,7 @@ bool StratusFile::readBody(std::ifstream &file) {
 
                 // Goes into SF file and pushes back the element import stuff
                 // (ie gets the element vector and adds it to the print out list)
-                vector<string> elemImport = importedSFs.at(tag).getElemVect(parameters);
+                vector<string> elemImport = importedSFs.at(tag).getElemVect();
                 for(int j = 0; j < elemImport.size(); j++){
                     temp.push_back(elemImport[j]);
                 }
@@ -313,8 +313,37 @@ Head StratusFile::getHead() {
 }
 
 
-vector<string> StratusFile::getElemVect(map<string, Parameter> params) {
-    return temp;
+vector<string> StratusFile::getElemVect() {
+    vector<string> elemVect;
+
+    //TODO: Make this not so scuffed
+    // (rn it is literally just looping through the element vector
+    //   and resolving parameters)
+    for(int l = 0; l < temp.size(); l++){
+        string line;
+        string p;
+        bool onParam = false;
+        for(int i = 0; i < temp[l].size(); i++){
+            //TODO: add [[ and ]] handling
+            if(temp[l][i] == '['){
+                onParam = true;
+            }
+            else if(temp[l][i] == ']'){
+                onParam = false;
+                cout << "PARAMETER: " << p << endl;
+                line += parameters.at(p).data;
+                p = "";
+            }
+            else if(onParam){
+                p += temp[l][i];
+            }
+            else{
+                line += temp[l][i];
+            }
+        }
+        elemVect.push_back(line);
+    }
+    return elemVect;
 }
 
 bool StratusFile::resolveParameters(map<std::string, std::string>& params) {

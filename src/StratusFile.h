@@ -46,7 +46,7 @@ public:
 //    map<string, Body> getImportedElements();
     map<string, Head> getImportedStyling();
 
-    vector<string> getElemVect(map<string, Parameter> params);
+    vector<string> getElemVect();
     Head getHead();
 
 
