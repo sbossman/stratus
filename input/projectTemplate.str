@@ -1,6 +1,6 @@
 PARAMETERS {
     STRING title,
-    STRING file,
+    FILE file,
     STRING link
 }
 

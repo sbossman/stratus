@@ -156,7 +156,7 @@ bool StratusFile::readParameters(std::ifstream &file, string currLine) {
             getline(line, type, ' ');
 
 
-        if(type != "STRING"){
+        if(type != "STRING" && type != "FILE"){
             cout << "Incorrect parameter type " << type << "." << endl;
             return false;
         }
@@ -331,7 +331,23 @@ vector<string> StratusFile::getElemVect() {
             else if(temp[l][i] == ']'){
                 onParam = false;
                 cout << "PARAMETER: " << p << endl;
-                line += parameters.at(p).data;
+                Parameter prm = parameters.at(p);
+                if(prm.type == "STRING"){
+                    line += prm.data;
+                }
+                else if(prm.type == "FILE"){
+                    ifstream prmFile(inputPath + prm.data);
+                    string readIn;
+                    if(!prmFile.is_open()){
+                        cerr << "FILE " << prm.data << " NOT OPEN" << endl;
+                    }
+                    while(getline(prmFile, readIn)){
+                        line += readIn + "<br>";
+                    }
+                }
+                else{
+                    cerr << "UNKNOWN TYPE FOR " << prm.name << endl;
+                }
                 p = "";
             }
             else if(onParam){
