@@ -5,3 +5,8 @@
 7	942	7358776885204707	CMakeFiles/stratus.dir/src/StratusFile.cpp.obj	13e704578e06eff0
 942	1138	7358776887136302	stratus.exe	7f06d18a735d92d3
 2	535	7357181151685107	CMakeFiles/stratus.dir/src/Body.cpp.obj	921e2893ff12f31
+18	537	7366384029800097	CMakeFiles/stratus.dir/src/Parameter.cpp.obj	63064c1c6a15d275
+4	813	7366384032559650	CMakeFiles/stratus.dir/src/main.cpp.obj	d32d8e961167bcd2
+10	953	7366384033957778	CMakeFiles/stratus.dir/src/Body.cpp.obj	921e2893ff12f31
+14	1234	7366384036751101	CMakeFiles/stratus.dir/src/StratusFile.cpp.obj	13e704578e06eff0
+1234	1548	7366384039891372	stratus.exe	6d2e09df8435a24b

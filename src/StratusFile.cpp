@@ -229,17 +229,19 @@ bool StratusFile::readBody(std::ifstream &file) {
                         }
                     }
                 }
-                if(parameters.size() > 0){
-                    cout << "SIZE > 0" << endl;
+                if(details.size() > 3){
                     params.emplace(currName, currVal);
                 }
                 importedSFs.at(tag).resolveParameters(params);
 
-                cout << "PARAMETERS RESOLVED" << parameters.size() << endl;
+                // Parameters now resolved and contained in parameters map
                 for(auto iter = parameters.begin(); iter != parameters.end(); iter++){
                     cout << iter->first << ": " << iter->second.data << endl;
                 }
-                vector<string> elemImport = importedSFs.at(tag).getElemVect();
+
+                // Goes into SF file and pushes back the element import stuff
+                // (ie gets the element vector and adds it to the print out list)
+                vector<string> elemImport = importedSFs.at(tag).getElemVect(parameters);
                 for(int j = 0; j < elemImport.size(); j++){
                     temp.push_back(elemImport[j]);
                 }
@@ -310,35 +312,35 @@ Head StratusFile::getHead() {
     return head;
 }
 
-//Body StratusFile::getBody(){
-//    return body;
-//}
 
-vector<string> StratusFile::getElemVect() {
+vector<string> StratusFile::getElemVect(map<string, Parameter> params) {
     return temp;
 }
 
-bool StratusFile::resolveParameters(map<std::string, std::string> params) {
+bool StratusFile::resolveParameters(map<std::string, std::string>& params) {
     for(auto iter = params.begin(); iter != params.end(); iter++){
          try{
             string name = iter->first;
             string value = iter->second;
 
             parameters.at(name).resolve(value);
-            cout << name << parameters.at(name).data << endl;
          }
          catch(...){
             cerr << "Parameter " << iter->first << " not found" << endl;
          }
     }
-    bool allResolved;
+    bool allResolved = true;
     for(auto iter = parameters.begin(); iter != parameters.end(); iter++){
         if(!iter->second.resolved){
-            cout << "Not: " << iter->second.name << endl;
+            cout << "Not: " << iter->second.name << "." << endl;
             allResolved = false;
         }
+        else{
+            cout << "Resolved: " << iter->second.name << endl;
+            cout << "\t " << iter->second.data << endl;
+        }
     }
-    if(!allResolved){
+    if(!allResolved && parameters.begin() != parameters.end()){
         cout << "NOT ALL RESOLVED" << endl;
     }
     return allResolved;

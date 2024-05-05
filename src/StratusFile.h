@@ -35,18 +35,18 @@ class StratusFile {
     bool readParameters(ifstream &file, string currLine);
     bool readBody(ifstream& file);
 
+    bool resolveParameters(map<string, string>& params);
+
 public:
     StratusFile(string file, string inputPath, string outputPath);
 
-    bool resolveParameters(map<string, string> params);
 
     bool writeToFile(string file);
 
 //    map<string, Body> getImportedElements();
     map<string, Head> getImportedStyling();
 
-//    Body getBody(); //TODO: replace with getElemVect
-    vector<string> getElemVect();
+    vector<string> getElemVect(map<string, Parameter> params);
     Head getHead();
 
 
