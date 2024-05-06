@@ -1,0 +1,10 @@
+In this project, I collaborated with my classmates in Data
+Structures and Algorithms to compare the efficiency of an
+adjacency matrix vs an adjacency list, when attempting to
+create the data structures and find paths between two points.
+We used data from the online fanfiction platform Archive of Our
+Own (Ao3), web scraping over 100,000 fanfictions, and their taglists.
+I wrote the code to turn the data points into the adjacency
+matrix and adjacency list, as well as the pathfinding algorithm
+for two points (we used a Breadth First Traversal to find the
+shortest route between two fanfictions).

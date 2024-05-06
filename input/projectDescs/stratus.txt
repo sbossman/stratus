@@ -1,0 +1,10 @@
+Stratus is a Static Site Generator I built for this website.
+It converts sites written in Stratus (a markdown language I
+created for my personal convenience and comfort) into HTML,
+so I can then load them onto the UF CISE web hosting (they
+only allow static HTML/CSS sites). At the moment, one can
+create components (such as a navigation bar) that are used
+throughout different webpages on the website. One can also
+create components that have parameters (as seen with the
+individual projects here, which have titles, text, and links
+passed in).

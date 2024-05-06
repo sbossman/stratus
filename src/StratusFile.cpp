@@ -195,12 +195,20 @@ bool StratusFile::readBody(std::ifstream &file) {
                 tag += buffer[i];
                 i++;
             }
+            bool qFlag = false;
             if(!importedElem)
                 tag_stack.push(tag);
 
             i++;
             string details;
-            while(buffer[i] != ')'){
+            //TODO: manage line breaks
+            while(true){
+                if(buffer[i] == ')' && !qFlag){
+                    break;
+                }
+                else if(buffer[i] == '"') {
+                    qFlag = !qFlag;
+                }
                 details += buffer[i];
                 i++;
             }
@@ -219,6 +227,9 @@ bool StratusFile::readBody(std::ifstream &file) {
                     }
                     else if(details[i] == '='){
                         onVal=true;
+                    }
+                    else if(!onVal && details[i] == ' '){
+
                     }
                     else{
                         if(onVal){
@@ -342,7 +353,10 @@ vector<string> StratusFile::getElemVect() {
                         cerr << "FILE " << prm.data << " NOT OPEN" << endl;
                     }
                     while(getline(prmFile, readIn)){
-                        line += readIn + "<br>";
+                        if(readIn.size() == 0){
+                            line += "<br>";
+                        }
+                        line += readIn + " "; // could put line breaks but nah
                     }
                 }
                 else{
@@ -366,9 +380,17 @@ bool StratusFile::resolveParameters(map<std::string, std::string>& params) {
     for(auto iter = params.begin(); iter != params.end(); iter++){
          try{
             string name = iter->first;
-            string value = iter->second;
+            string valueRaw = iter->second;
+            string value;
 
+            if(parameters.at(name).type == "STRING" && valueRaw[0] == '"'){
+                value = valueRaw.substr(1, valueRaw.size()-2);
+            }
+            else{
+                value = valueRaw;
+            }
             parameters.at(name).resolve(value);
+
          }
          catch(...){
             cerr << "Parameter " << iter->first << " not found" << endl;

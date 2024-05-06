@@ -1,0 +1,7 @@
+This programming project is one I completed in high school. It parses through a TXT file of a Shakespeare play, and then
+identifies all of the different characters, as well as the number
+of lines they have, the words they speak, and the characters they
+talk to. Using this information, I also wrote an algorithm to
+distribute the different characters in the play to a different
+number of "readers," so no person reading the play out loud has
+to speak to themself.

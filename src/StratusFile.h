@@ -7,7 +7,6 @@
 #include <vector>
 #include <map>
 
-#include "Body.h"
 #include "Head.h"
 #include "Parameter.h"
 

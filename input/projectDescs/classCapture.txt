@@ -1,0 +1,13 @@
+Class Capture is a project I worked on with a few others in
+my class. It's a social media app that allows different users
+to join groups with their friends, coworkers, or classmates,
+and they can all upload photos. Then, at the end of a time
+period, all of the photos they took and uploaded will be
+released, so they can look back on the enjoyable times they
+had together. It is currently a work in progress.
+
+It is a full stack web app that uses ReactJS for the front end
+and MongoDB for the back end. I did most of the work for the
+front end for this project, so I learned a lot of React for
+this project. I also did a fair amount of front end/back end
+connection fetching data from the database.

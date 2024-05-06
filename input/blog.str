@@ -78,5 +78,170 @@ _div(class="main"){
             }
         }
     }
+
+    _h2() { Interesting Websites }
+    _p(){
+        These are just various websites I found interesting, be it for entertainment or otherwise.
+    }
+    _ul(){
+        _li(){
+            _a(href="https://xkcd.com/"){
+                XKCD
+            }
+            : I just find this an interesting website
+        }
+        _li(){
+            _a(href="https://existentialcomics.com/"){
+                Existential Comics
+            }
+            : As someone with an interest in philosophy, I find this an amusing way to engage with
+            it and learn in an entertaining manner.
+        }
+        _li(){
+            _a(href="https://www.youtube.com/@crashcourse"){
+                Crash Course
+            }
+            : You probably already know about the Crash Course YouTube channel, but if you don't, I
+            highly recommend it. I particularly recommend the Philosophy course. It's fascinating,
+            and helped me get a quality grasp on difficult concepts.
+        }
+        _li(){
+            _a(href="https://tvtropes.org/"){
+                TV Tropes
+            }
+            : This is an interesting website that examines common occurrences in fiction (known as
+            "tropes")
+        }
+        _li(){
+            _a(href="https://www.opensourceshakespeare.org/"){
+                Open Source Shakespeare
+            }
+            : This website offers all of Shakespeare's different plays, and also lets you see the
+            number of speeches and words each character has, which I find fascinating.
+        }
+    }
+
+    _h2(){ Productivity Tips }
+    _p(){
+        I consider myself a relatively productive individual. These are some habits and strategies
+        I've developed so far that may be helpful. (Of course, there's the mandatory disclaimer
+        that not everything works for everyone, and if any or all of these don't work for you,
+        that's perfectly alright. One of the most common misconceptions with productivity is
+        thinking that there's objectively one way to be productive. In reality, everyone's has a
+        different variety of things that work or not for them. Do what works for you.)
+    }
+    _p(){
+        Most of these tips come down to reducing distractions, and making your time more structured.
+    }
+
+
+    _h3(){ Time Management Tips }
+    _ul(){
+        _li(){
+            _b() { Build a Routine }
+            Try to do the same pieces of work at the same time on a daily or weekly basis. For
+            instance, if you have three homework assignments due every week, do one on Monday,
+            one on Wednesday, and one on Friday. Then, turn this process into a habit, so your
+            brain no longer has to consciously "choose" what assignment to do. It simply becomes
+            an instinctive "I will do this because it is 3:00 on Monday." Building meals into
+            this routine can be helpful as well. In high school, I did my homework assignments in
+            the same order every evening, and this meant I never wasted time deciding which
+            assignment to do next. It also helped my brain more naturally flow from one assignment
+            to the next.
+        }
+        _li(){
+            _b() { Treat College like a 9-5 }
+            Block out the specific hours for which you plan to work. Setting a given end time to my
+            work day (even if it's 7:00, not 5:00) makes me more productive in the time I have, as
+            it means that I have hope of being able to finish my work. I find that if I'm deciding
+            to work all day, my day is filled with a multitude of ten minute distractions, because
+            I've decided that if I'm not going to be having free time anyway, there's no harm in a
+            little treat. This also means your free time is more guiltless and enjoyable, because
+            you can do things you actually enjoy, not a ten minute Instagram scroll.
+        }
+        _li(){
+            _b() { Time Block }
+            Set up a specific schedule for yourself with blocks of time to complete tasks, even if
+            it's just cleaning the house. Pinning down the actual time you plan on completing a task
+            will make you more likely to complete it, instead of just saving it for later.
+        }
+        _li(){
+            _b() { 3 Things a Day }
+            Set a realistic goal of the things you actually want to complete that day. Your number may
+            not be three, but just set an ACHIEVABLE goal of what you want to complete. This will ensure
+            that you're both productive, but also not overworking yourself.
+        }
+    }
+
+    _h3(){ Phone Tips }
+    _ul(){
+        _li(){
+            _b() { Greyscale Phone }
+            One of the main things that contribute to distraction is (of course) one's phone. Recently,
+            I switched my phone onto greyscale, so it's completely black and white. Because one of the
+            primary ways our phone hooks our attention is through its bright colors (particularly when
+            it comes to social media), having your phone on black and white means it's a lot easier to
+            pull your attention away.
+        }
+        _li(){
+            _b() { Simplified Home Screen }
+            In addition to making my phone black and white, I also took out my Google Feed, so I can't
+            scroll through news stories. I also took most of the apps on my home page, so in order to
+            find them I have to search through my entire library of apps. This adds a layer of inconvenience
+            that means I'm less likely to aimlessly swipe around on my phone. Instead, I use it for a
+            specific purpose.
+        }
+        _li(){
+            _b() { Limit Notifications }
+            A lot of apps we have send a large number of useless notifications. Disabling these will mean
+            that you won't check your phone because you have a notification, only to discover it's a
+            random app you don't care about. Notifications are designed to get you to use the app MORE, so
+            disabling notifications for many apps will ensure you use your phone less.
+        }
+        _li(){
+            _b() { Set Time Limits }
+            For any apps you have a tendency to overuse, set it up so they have a reasonable time limit. For
+            example, I'm willing to spend 20 minutes on Instagram a day, because this means I can see all
+            messages people send me through it, but I don't end up scrolling for long periods of time.
+        }
+        _li(){
+            _b() { Place Phone Face Down }
+            When you're trying to do work, place your phone face down so you can't see any of the notifications.
+            Also, the screen is quite reflective, so light catching against it will reflect less at you, making
+            you less likely to look at it.
+        }
+        _li(){
+            _b() { Turn on Bedtime }
+            Most phones have a bedtime setting that makes your phone go on Do Not Disturb at a certain point of
+            the day. Setting this up will increase your awareness of the time, making the act of using your phone
+            a choice, not so much a habit. The more steps to take a certain action, the more difficult it is to
+            do it, so setting a bedtime (even if it's relatively easy to disable) is a manner of addig more steps.
+        }
+    }
+
+    _h3() { Other Tips }
+    _ul(){
+        _li(){
+            _b() { Talk Yourself Through It }
+            If you really struggle on focusing, talk yourself through the assignment or problem. For example,
+            explain what you're coding as you code i, or act like you're teaching someone a math problem. The
+            act of speaking helps to focus your thoughts.
+        }
+        _li(){
+            _b() { Write Down Stray Thoughts }
+            Very often when I'm trying to focus on something, I'll think of random things I want to look up
+            or add to my grocery list or think about later. Usually, these aren't urgent at all. So instead
+            of opening my phone to complete the task, I'll write down that thought on a notepad, so I can
+            revisit it when I'm not trying to focus on work.
+        }
+        _li(){
+            _b() { Disable Computer Task Bar }
+            Disabling my computer task bar means I don't see all of the different other windows I have open.
+            This helps me forget that they exist, so I no longer have the urge to check them consistently.
+            This is another instance of increasing the effort it takes to do a mindless action, which helps
+            prevent me from doing it.
+        }
+    }
+
 }
 __navbar()

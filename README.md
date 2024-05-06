@@ -42,15 +42,35 @@ _div(attributes here){
 ```
 Thus all HTML type keywords should begin with an underscore (`_`).
 \n
-To include components you created, use two underscores instead,
-to fill in any relevant parameters. Don't use any braces. They won't do
-anything.
+To include components you created, use two underscores instead of
+one. To add in any necessary parameters, place them in the parenthesis.
+Using your own components doesn't require any brackets (`{}`).
+```
+__myComponent(param="cat")
+```
 
-*NOTE: This is not current functionality that is fully working. As
-of right now, you can't put any parameters in.*
+In order to create a parameterized component, in the HEAD of the 
+project, include a `PARAMETERS` section. The only two data types accepted for parameters are FILE and STRING.
+STRING will simply take all instances of that parameter and use the
+string passed in, while FILE will take all usages of that parameter
+and read in the file instead.
 
+In order to use a parameter, simply put the parameter in braces:
 
-`[myComponent]`
+```
+PARAMETERS {
+    STRING title,
+    FILE file
+}
+
+BODY
+_h1(){
+    [title]
+}
+_p(){
+    [file]
+}
+```
 
 
 *For an example Stratus file, see the `input` folder of this repo* 
@@ -78,16 +98,12 @@ of right now, you can't put any parameters in.*
 - Figure out syntax highlighting for Stratus files
 - Create library of helpful templates
 - Making templates easier to create + use would be good too
-- Improve CSS stuff
-- Include * and **, and other sorts of things
-- Enable different tags on same line
+- Include * and **, and other inline emphasizers (and \)
 - Figure out embedding JavaScript
-- Blog txt writer thing
 - Update stuff so it's no longer so line break dependent
-- get rid of Body class and just combine it with StratusFile
+- Create thing to loop through created files and put them all in
+- Parse markdown files? (like for blog)
 
-## Misc Grammar Notes to self
-STRING, FILE, ELEMENT
+## Misc Grammar Notes
 is element necessary data type if it could just be collapsed
 into file?
-base stratus file can't have any parameters

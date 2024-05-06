@@ -8,4 +8,4 @@ BODY
 _h1(){
     This is a website
 }
-__projectTemplate(title=YEEHAW,file=projectInfo.txt,link="https://github.com/sbossman")
+__projectTemplate(title=YEEHAW,file=projectDescs/lineDist.txt,link="https://github.com/sbossman")

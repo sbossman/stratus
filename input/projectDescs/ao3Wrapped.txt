@@ -1,0 +1,6 @@
+As a reader of the platform Archive of Our Own (which holds fanfiction
+written about a variety of different books, movies, television shows,
+etc), I wanted a way to discover the most common types of works I
+read. I used a web scraping extension to scrape my reading history
+into a CSV, and then parsed through that CSV in Python, in order to
+discover my most beloved tropes and fandoms.

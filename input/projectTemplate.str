@@ -11,6 +11,6 @@ _h2(){
 _p(){
     [file]
 }
-_a(href=[link]){
+_a(href="https://github.com[link]"){
     Github Repository
 }
